@@ -1,0 +1,38 @@
+<div class="header pb-8 pt-3 pt-md-6">
+  <div class="container-fluid">
+    <div class="header-body">
+      <a class="btn btn-primary" style="width: 200px; border-radius: 20px;" (click)="onAddPerson()">
+        Add new person <em class="fas fa-add"></em>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="container-fluid mt--7">
+  <!-- Table -->
+  <div class="row">
+    <div class="col">
+      <div class="row" [ngClass]="{'justify-content-center': people.length < 4}">
+        <div class="people-col-xl-2 col-lg-3 col-md-3" *ngFor="let item of people" style="margin-top: 10px;">
+          <div class="card shadow">
+            <img [src]="item.avatar" class="card-img-top" [alt]="item.name" style="height: 250px;" />
+            <div class="card-body">
+              <h4 class="h4 text-center" [title]="'Editing ' + item.name" style="font-weight: 600; cursor: pointer;"
+                (click)="onEdit(item)">{{item.name}}</h4>
+              <P class="text-left mb-0" style="font-weight: 600;">Email:
+                <span class="text-muted"> {{item.email}}</span>
+              </P>
+              <P class="text-left mb-0" style="font-weight: 600;">Country:
+                <span class="text-muted">{{item.country}}</span>
+              </P>
+              <P class="text-left mb-0" style="font-weight: 600;">Age:
+                <span class="text-muted">{{item.dob |Age}}</span>
+              </P>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<span *ngIf="control.value">
+  <small *ngIf="control.value.length < maxLength && (control.touched || isSubmitted)">You enter invalid {{name}}</small>
+  <small *ngIf="control.value.length > maxLength">{{name}} exceed {{maxLength}} characters</small>
+</span>
+
+<small *ngIf="!control.value && (control.touched || isSubmitted)">Please enter {{name}}</small>

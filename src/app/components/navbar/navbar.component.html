@@ -1,0 +1,15 @@
+<nav class="navbar navbar-top navbar-expand-md navbar-dark bg-gradient-gray" id="navbar-main">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="h4 mb-0 text-white text-uppercase d-lg-inline-block" routerLinkActive="active"
+      [routerLink]="['/person/list']">{{getTitle()}}</a>
+    <!-- Form -->
+    <div class="navbar-search navbar-search-dark form-inline mr-3 d-md-flex ml-lg-auto">
+      <div class="form-group mb-0">
+        <a class="h4 mb-0 text-white text-uppercase" [routerLink]="['/person/list']" style="font-weight: 600;">
+          M<sup>3</sup>E Person CRUD
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

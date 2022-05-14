@@ -1,0 +1,68 @@
+$green: #307672 !default;
+$red: #ec2b46 !default;
+$orange: #ee602b !default;
+$white: #fff !default;
+
+.m3y-spinner {
+  height: 100%;
+  width: 100%;
+  z-index: 9999999999999999999999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(#212529, 0.8);
+  animation: ease-in-out .25s ease forwards;
+}
+
+.m3y-spinner mat-spinner {
+  z-index: 10;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dateIcon {
+  position: absolute;
+  left: 10px;
+  top: 30px;
+}
+
+.simple-notification {
+  text-align: left !important;
+  min-height: 60px !important;
+}
+
+.simple-notification .icon {
+  left: auto !important;
+  right: 0px !important;
+  height: 100% !important;
+}
+
+.simple-notification.success {
+  background: rgba($green, 0.8) !important;
+}
+
+.simple-notification.success .sn-progress-loader span {
+  background: $green !important;
+}
+
+.simple-notification.error {
+  background: rgba($red, 0.8) !important;
+}
+
+.simple-notification.error .sn-progress-loader span {
+  background: $red !important;
+}
+
+.simple-notification.warn div {
+  color: $white !important;
+}
+
+.simple-notification.warn {
+  background: rgba($orange, 0.8) !important;
+}
+
+.simple-notification.warn .sn-progress-loader span {
+  background: $orange !important;
+}
